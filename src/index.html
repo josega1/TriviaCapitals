@@ -7,6 +7,60 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="bg-1">
+      <h1 class="t-stroke t-shadow">Questionary</h1>
+    </div>
+    <section class="Tarjetas">
+      <div class="Tarjeta1">
+        <h2 class="subtitulo">Pregunta</h2>
+        <div class="pregunta1">
+          <div class="respuestas1" id="seleccionarRespuesta1">
+            <label class="primeraopcion" for="a">esta es la primera opcion
+            </label>
+            <input type="radio" name="respuesta" id="a" >
+
+            <label class="primeraopcion" for="b">esta es la segunda opcion
+            </label>
+            <input type="radio" name="respuesta" id="b" >
+
+            <label class="primeraopcion" for="c">esta es la tercera opcion
+            </label>
+            <input type="radio" name="respuesta" id="c" >
+          </div>
+        </div>
+      </div>
+      <img src="../img/Anunciador_Dokkan.webp" alt="presentador">
+      
+      <div class="Tarjeta2">
+        <h2 class="subtitulo" >Pregunta</h2>
+        <div class="pregunta2">
+          <div class="respuestas2">
+            <div class="primeraopcion">
+              <input class="boton" type="radio" value="A">
+              <p>esta es la primera opcion</p>
+            </div>
+            <div class="primeraopcion">
+              <input class="boton" type="radio" value="B">
+              <p>esta es la primera opcion</p>
+            </div>
+            <div class="primeraopcion">
+              <input class="boton" type="radio" value="C">
+              <p>esta es la primera opcion</p>
+            </div>
+          </div>  
+        </div>
+      </div>
+      
+    </section>
+    <div class="etiquetas"> 
+      <p class="frase">¿¡Are you ready!?</p>
+        <button class="enviar" type="button">enviar</button>
+        <p class="mensaje">Las Respuestas correctas son 1. <span>respuesta1</span> y la 2. <span>respuesta2</span> </p>
+        
+    </div>
+    
+    
+
     <div id="root"></div>
     <script src="main.js"></script>
   </body>

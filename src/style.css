@@ -1,3 +1,178 @@
-/*
-  Aquí van los estilos
-*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+body {
+  background-color: #000000;
+  background-repeat: no-repeat;
+	background-size: 100% 165%;
+  font-family: 'Bungee Spice' , cursive;
+  color: rgb(253, 253, 253);
+  
+}
+.titulo {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  font-family: 'Bungee Inline', cursive;
+
+
+}
+
+.Tarjetas {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.pregunta1 {
+  display: flex;
+  justify-content: space-around;
+  height: fit-content;
+  width: fit-content;
+  background: rgba(0, 0, 0, 0.596);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: black;
+  box-shadow: 0px -4px 15px 15px rgb(250, 250, 250);
+}
+.pregunta2 {
+  display: flex;
+  justify-content: space-around;
+  height: fit-content;
+  width: fit-content;
+  background: rgba(0, 0, 0, 0.596);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: black;
+  box-shadow: 0px -4px 15px 15px rgb(255, 255, 255);
+}
+
+.respuesta1, respuesta2 {
+  display: flex;
+  justify-content: space-around;
+  
+}
+.Tarjeta1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.Tarjeta2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.primeraopcion {
+  display: flex;
+  justify-content: space-around;
+}
+/* .primeraopcion {
+ background-color: #943fcc;
+    border: none;
+    border-radius: 25px;
+    width: 3rem;
+    height: 3rem;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 15px auto;
+    font-family: Poppins, sans-serif;
+    cursor: pointer;
+}
+.primeraopcion:active{
+  background-color: #ffffff;
+  color: #ea00ff;
+}
+.primeraopcion:hover {
+  transform: scale(1.2);
+ 
+ } */
+.primeraopcion {
+  background-color: #EEE9DA;
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px;
+    padding: 10px;
+    border-radius: 10px;
+  border: 5px solid #831aa3;
+  color: #000000;
+}
+.frase {
+  display: flex;
+  align-items: center;
+  margin: 0 0 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 5px solid #831aa3;
+  color: #ffffff;
+  height: fit-content;
+  width: fit-content;
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  background: rgba(0, 0, 0, 0.863);
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.808);
+  font-size: 2rem;
+}
+
+.bg-1{
+  text-align: center;
+  justify-content: center;
+     
+  }
+   
+  .t-stroke {
+    color: transparent;
+    -moz-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 2px;
+    -moz-text-stroke-color: #000000;
+    -webkit-text-stroke-color: #ffffff;
+  }
+  .t-shadow {
+    text-shadow: 7px 7px #6828d9;
+  }
+  h2 {
+    height: 62px;
+    width: 162px;
+    background: rgba(0, 0, 0, 0.863);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    box-shadow: 0px -4px 15px 15px rgba(255, 255, 255, 0.884);
+    justify-content: center;
+  } 
+  .etiquetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .enviar {
+    background-color: #464549;
+    color: white;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+  .enviar:hover {
+   transform: scale(1.2);
+   cursor: pointer;
+  
+  }
+  .enviar:active {
+    
+    background-color: #57088b;
+  
+  }
