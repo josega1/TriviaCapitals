@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./main.js"></script>
   </head>
   <body>
     <div class="bg-1">
@@ -12,56 +13,51 @@
     </div>
     <section class="Tarjetas">
       <div class="Tarjeta1">
-        <h2 class="subtitulo">Pregunta</h2>
+        <h2 class="subtitulo">Cual es la Capital de Butan</h2>
         <div class="pregunta1">
-          <div class="respuestas1" id="seleccionarRespuesta1">
-            <label class="primeraopcion" for="a">esta es la primera opcion
+          <form class="respuestas1" id="seleccionarRespuesta1">
+            <label class="primeraopcion" for="sofia">Sofia
             </label>
-            <input type="radio" name="respuesta" id="a" >
+            <input class="input" type="radio" name="respuesta" id="sofia" value="sofia">
+            <label class="primeraopcion" for="timbu">Timbu
+            </label>
+            <input class="input" type="radio" name="respuesta" id="timbu" >
 
-            <label class="primeraopcion" for="b">esta es la segunda opcion
+            <label class="primeraopcion" for="skopje">Skopje
             </label>
-            <input type="radio" name="respuesta" id="b" >
-
-            <label class="primeraopcion" for="c">esta es la tercera opcion
-            </label>
-            <input type="radio" name="respuesta" id="c" >
-          </div>
+            <input class="input" type="radio" name="respuesta" id="skopje" >
+          </form>
         </div>
       </div>
       <img src="../img/Anunciador_Dokkan.webp" alt="presentador">
       
       <div class="Tarjeta2">
-        <h2 class="subtitulo" >Pregunta</h2>
-        <div class="pregunta2">
-          <div class="respuestas2">
-            <div class="primeraopcion">
-              <input class="boton" type="radio" value="A">
-              <p>esta es la primera opcion</p>
-            </div>
-            <div class="primeraopcion">
-              <input class="boton" type="radio" value="B">
-              <p>esta es la primera opcion</p>
-            </div>
-            <div class="primeraopcion">
-              <input class="boton" type="radio" value="C">
-              <p>esta es la primera opcion</p>
-            </div>
-          </div>  
-        </div>
+        <h2 class="subtitulo">Cual es la Capital de Tayikistán</h2>
+        <form class="pregunta2">
+          <div class="respuestas2" id="seleccionarRespuesta1">
+            <label class="primeraopcion" for="buenos-Aires">Buenos Aires
+            </label>
+            <input class="input" type="radio" name="respuesta" id="buenos-Aires" >
+
+            <label class="primeraopcion" for="bogota">Bogotá
+            </label>
+            <input class="input" type="radio" name="respuesta" id="bogota" >
+
+            <label class="primeraopcion" for="dusambe">Dusambé
+            </label>
+            <input class="input" type="radio" name="respuesta" id="dusambe" >
+          </div>
+        </form>
       </div>
       
     </section>
     <div class="etiquetas"> 
       <p class="frase">¿¡Are you ready!?</p>
-        <button class="enviar" type="button">enviar</button>
-        <p class="mensaje">Las Respuestas correctas son 1. <span>respuesta1</span> y la 2. <span>respuesta2</span> </p>
+      <button class="enviar" type="button" id="boton-enviar">enviar</button>
+      <p class="mensaje" id="mensaje">La Capital de <span>Butan</span> es <span>Timbu</span> y La Capital de <span>Tayikistán</span> es <span>Dusambé</span></p>
         
     </div>
     
-    
-
     <div id="root"></div>
-    <script src="main.js"></script>
   </body>
 </html>
