@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 
 body {
   background-color: #000000;
@@ -17,11 +17,22 @@ body {
 
 }
 
-.Tarjetas {
+.ejemplo::placeholder {
+  font-size: .8rem;
+  color: gray;
+}
+
+.frase {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.segundaPantalla {
   display: flex;
   align-content: center;
   flex-direction: row;
   justify-content: center;
+  display: none;
 }
 .Tarjeta1 {
   display: flex;
@@ -46,26 +57,6 @@ body {
     justify-content: space-evenly;
 }
 
-/* .primeraopcion {
- background-color: #943fcc;
-    border: none;
-    border-radius: 25px;
-    width: 3rem;
-    height: 3rem;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 15px auto;
-    font-family: Poppins, sans-serif;
-    cursor: pointer;
-}
-.primeraopcion:active{
-  background-color: #ffffff;
-  color: #ea00ff;
-}
-.primeraopcion:hover {
-  transform: scale(1.2);
- 
- } */
 .primeraopcion {
   background-color: #EEE9DA;
     display: flex;
@@ -78,13 +69,8 @@ body {
     height: 1rem;
     width: 14rem;
 }
-.input{
-  /* display: none; */
-}
-.frase {
-  font-size: 2rem;
-  margin: 0;
-}
+
+
 
 .bg-1{
   text-align: center;
@@ -124,7 +110,7 @@ body {
     font-size: 1.5rem;
     margin: 1rem;
     border: 2px solid white;
-    /* display: none; */
+   
 }
 
   .enviar:hover {
@@ -144,4 +130,4 @@ body {
   }
   .mensaje{
     display: none;
-  }
+  } */
