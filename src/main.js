@@ -23,11 +23,14 @@ function seleccionarRespuesta(){
     let selectionEnviar = document.getElementById('mensaje');
     selectionEnviar.style.display = 'block'
   }
-  else{alert('hola')}
-  
+  else{alert('marca una respuesta')}
+
 }
 
+
+
 window.addEventListener('load', iniciarTrivia)
+
 
 
 
