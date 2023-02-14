@@ -1,5 +1,5 @@
 let primeraPantalla = document.getElementById("primera-pantalla");
-primeraPantalla.style.display = "block";
+primeraPantalla.style.display = "flex";
 let segundaPatalla = document.getElementById("segunda-pantalla");
 segundaPatalla.style.display = "none";
 let terceraPantalla = document.getElementById("tercera-pantalla");
@@ -36,7 +36,9 @@ form1.addEventListener("submit", (event1) => {
     if (
       document.querySelector('input[name="respuesta1"]:checked').value === "Timbu") {
       acc += 1;
+      spanCorrecta1.innerText = 'Correct'
     } else {
+      spanCorrecta1.innerText = 'Incorrect'
       acc += 0;
     }
     segundaPatalla.style.display = "none";
@@ -44,7 +46,6 @@ form1.addEventListener("submit", (event1) => {
   } else {
     alert("Selecciona alguna respuesta");
   }
-  console.log(acc);
   event1.preventDefault();
 });
 
@@ -61,40 +62,19 @@ form2.addEventListener("submit", (event2) => {
   if (document.querySelector('input[name="respuesta2"]:checked')) {
     if (document.querySelector('input[name="respuesta2"]:checked').value === "Dusambe") {
       acc += 1;
-    }else{
+      spanCorrecta2.innerText = 'Correct'
+    } else {
+      spanCorrecta2.innerText = 'Incorrect'
       acc += 0;
     }
     terceraPantalla.style.display = "none";
     cuartaPantalla.style.display = "block";
+    
   }else{
     alert("Selecciona alguna respuesta");
   }
-  console.log(acc);
   event2.preventDefault();
 });
-
-// let botonEnviar1 = document.getElementById("boton-enviar1");
-// botonEnviar1.addEventListener("click", () => {
-//   if (inputBuenosAires.checked) {
-//     terceraPantalla.style.display = "none";
-//     cuartaPantalla.style.display = "block";
-//     spanElection2.innerHTML = inputBuenosAires.value;
-//     spanCorrecta2.innerText = "Incorrect";
-//   } else if (inputBogota.checked) {
-//     terceraPantalla.style.display = "none";
-//     cuartaPantalla.style.display = "block";
-//     spanElection2.innerHTML = inputBogota.value;
-//     spanCorrecta2.innerText = "Incorrect";
-//   } else if (inputDusambe.checked) {
-//     terceraPantalla.style.display = "none";
-//     cuartaPantalla.style.display = "block";
-//     spanElection2.innerHTML = inputDusambe.value;
-//     spanCorrecta2.innerText = "Correct";
-//     acc += 1;
-//   } else {
-//     alert("please choose an option");
-//   }
-// });
 
 let inputVenezia = document.getElementById("venezia");
 let inputCaracas = document.getElementById("caracas");
@@ -102,43 +82,29 @@ let inputRoma = document.getElementById("roma");
 let spanElection3 = document.getElementById("election3");
 let spanCorrecta3 = document.getElementById("correcta3");
 
-let botonEnviar2 = document.getElementById("boton-enviar2");
-botonEnviar2.addEventListener("click", () => {
-  if (inputVenezia.checked) {
+let form3 = document.getElementById('form3');
+form3.addEventListener("submit", (event3) => {
+  if (document.querySelector('input[name="respuesta3"]:checked')) {
+    if (document.querySelector('input[name="respuesta3"]:checked').value === "Roma") {
+      acc += 1;
+      spanCorrecta3.innerText = 'Correct' 
+    } else {
+      spanCorrecta3.innerText = 'Incorrect'
+      acc += 0;
+    }
     cuartaPantalla.style.display = "none";
     quintaPantalla.style.display = "block";
-    spanElection3.innerHTML = inputVenezia.value;
-    spanCorrecta3.innerText = "Incorrect";
-  } else if (inputCaracas.checked) {
-    cuartaPantalla.style.display = "none";
-    quintaPantalla.style.display = "block";
-    spanElection3.innerHTML = inputCaracas.value;
-    spanCorrecta3.innerText = "Incorrect";
-  } else if (inputRoma.checked) {
-    cuartaPantalla.style.display = "none";
-    quintaPantalla.style.display = "block";
-    spanElection3.innerHTML = inputRoma.value;
-    spanCorrecta3.innerText = "Correct";
-    acc += 1;
-  } else {
-    alert("please choose an option");
+  }else{
+    alert("Selecciona alguna respuesta");
   }
+  event3.preventDefault();
+  let spanScore  = document.getElementById('score')
+    spanScore.innerHTML = acc
 });
-
 let inputRestart = document.getElementById("boton-restart");
 
 inputRestart.addEventListener("click", () => {
-  // if (spanElection1 == 'Timbu') {
-  //   spanCorrecta1 = 'Correct'
-  // } else if(spanElection2 == 'Bogota'){
-  //   spanCorrecta2 = 'Correct'
-  // } else if(spanElection3 == 'Roma'){
-  //   spanCorrecta3 = 'Correct'
-  // }
-
-  // else{
-  //   spanCorrecta1 = 'Incorrect'
-  // }
-
+ 
   location.reload();
 });
+

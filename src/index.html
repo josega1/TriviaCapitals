@@ -10,10 +10,10 @@
     <div class="bg-1">
       <h1 class="t-stroke t-shadow">Questionary</h1>
     </div>
-    <section id="primera-pantalla">
+    <section id="primera-pantalla" class="pantalla-1">
       <h2>WELCOME</h2>
       <h3>please put your name</h3>
-      <p>NAME</p>
+      <p class="name1">NAME</p>
       <input
         id="name"
         type="text"
@@ -28,7 +28,7 @@
       <div class="Tarjeta1">
         <h2 class="subtitulo">¿Cuál es la Capital de Bután?</h2>
         <div class="pregunta1">
-          <form class="respuestas1" id="form1">
+          <form class="respuestas1 formulario" id="form1">
             <label class="primeraopcion" for="sofia">Sofia </label>
             <input
               class="input"
@@ -70,14 +70,14 @@
     <section class="tercera-pantalla" id="tercera-pantalla">
       <div class="Tarjeta2">
         <h2 class="subtitulo">¿Cuál es la Capital de Tayikistán?</h2>
-        <form class="pregunta2" id="form2">
+        <form class="pregunta2 formulario" id="form2">
             <label class="primeraopcion" for="buenos-aires"
               >Buenos Aires
             </label>
             <input
               class="input"
               type="radio"
-              name="respuesta"
+              name="respuesta2"
               id="buenos-aires"
               value="Buenos Aires"
             />
@@ -86,7 +86,7 @@
             <input
               class="input"
               type="radio"
-              name="respuesta"
+              name="respuesta2"
               id="bogota"
               value="Bogotá"
             />
@@ -95,12 +95,12 @@
             <input
               class="input"
               type="radio"
-              name="respuesta"
+              name="respuesta2"
               id="dusambe"
               value="Dusambe"
             />
           <div class="etiquetas">
-            <button class="enviar" type="button" id="boton-enviar1">enviar</button>
+            <button class="enviar" type="submit" id="boton-enviar1">enviar</button>
           </div>
         </form>
       </div>
@@ -112,12 +112,12 @@
       <div class="Tarjeta3">
         <h2 class="subtitulo">¿Cuál es la Capital de Italia?</h2>
         <div class="pregunta3">
-          <form class="respuestas3" id="seleccionarRespuesta3">
+          <form class="respuestas3 formulario" id="form3">
             <label class="primeraopcion" for="venezia">Venezia </label>
             <input
               class="input"
               type="radio"
-              name="respuesta"
+              name="respuesta3"
               id="venezia"
               value="Venezia"
             />
@@ -125,7 +125,7 @@
             <input
               class="input"
               type="radio"
-              name="respuesta"
+              name="respuesta3"
               id="caracas"
               value="Caracas"
             />
@@ -134,18 +134,19 @@
             <input
               class="input"
               type="radio"
-              name="respuesta"
+              name="respuesta3"
               id="roma"
               value="Roma"
             />
+            <div class="etiquetas">
+              <button class="enviar" type="submit" id="boton-enviar2">enviar</button>
+          </div>
           </form>
         </div>
       </div>
       <p class="frase">This is the third question.</p>
       <img src="../img/Anunciador_Dokkan.webp" alt="presentador" />
-      <div class="etiquetas">
-        <button class="enviar" type="button" id="boton-enviar2">enviar</button>
-      </div>
+      
     </section>
 
     <section id="quinta-pantalla">
@@ -166,6 +167,7 @@
         <span id="correcta3"></span> <br />
         Roma
       </p>
+      <p>Your score is <span id="score"></span>/3</p>
 
       <button class="restart" type="button" id="boton-restart">RESTART</button>
     </section>
