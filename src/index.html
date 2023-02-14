@@ -1,114 +1,176 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trivia</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="./main.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="bg-1">
       <h1 class="t-stroke t-shadow">Questionary</h1>
     </div>
-    <section id="primeraPantalla">
+    <section id="primera-pantalla">
       <h2>WELCOME</h2>
-      <h3>please put your name</h3> 
+      <h3>please put your name</h3>
       <p>NAME</p>
-      <input id="name" type="text" class="name" placeholder="ej. Pepito Perez">
-      <p class="frase">¿¡Are you ready!?</p>
+      <input
+        id="name"
+        type="text"
+        class="name"
+        placeholder="ej. Pepito Perez"
+      />
+      <p class="frase">Are you ready!?</p>
       <button class="start" type="button" id="boton-start">START</button>
     </section>
 
-    <section class="segundaPantalla" id="segundaPantalla">
+    <section class="segunda-pantalla" id="segunda-pantalla">
       <div class="Tarjeta1">
         <h2 class="subtitulo">¿Cuál es la Capital de Bután?</h2>
         <div class="pregunta1">
-          <form class="respuestas1" id="seleccionarRespuesta1">
-            <label class="primeraopcion" for="sofia">Sofia
-            </label>
-            <input class="input" type="radio" name="respuesta" id="sofia" value="sofia">
-            <label class="primeraopcion" for="timbu">Timbu
-            </label>
-            <input class="input" type="radio" name="respuesta" id="timbu" value="timbu">
-            <label class="primeraopcion" for="skopje">Skopje
-            </label>
-            <input class="input" type="radio" name="respuesta" id="skopje" value="skopje">
+          <form class="respuestas1" id="form1">
+            <label class="primeraopcion" for="sofia">Sofia </label>
+            <input
+              class="input"
+              type="radio"
+              name="respuesta1"
+              id="sofia"
+              value="Sofia"
+            />
+            <label class="primeraopcion" for="timbu">Timbu </label>
+            <input
+              class="input"
+              type="radio"
+              name="respuesta1"
+              id="timbu"
+              value="Timbu"
+            />
+            <label class="primeraopcion" for="skopje">Skopje </label>
+            <input
+              class="input"
+              type="radio"
+              name="respuesta1"
+              id="skopje"
+              value="Skopje"
+            />
+            <div class="etiquetas">
+              <button class="enviar" type="submit" id="boton-enviar">
+                enviar
+              </button>
+            </div>
           </form>
         </div>
       </div>
-      <p class="frase">Hola <span id="user-name"></span> this is the first question.</p>
-      <img src="../img/Anunciador_Dokkan.webp" alt="presentador">
-      <div class="etiquetas"> 
-      <button class="enviar" type="button" id="boton-enviar">enviar</button>     
-    </div>
+      <p class="frase">
+        Hello <span id="user-name"></span> this is the first question.
+      </p>
+      <img src="../img/Anunciador_Dokkan.webp" alt="presentador" />
     </section>
 
-    <section class="terceraPantalla" id="terceraPantalla">
+    <section class="tercera-pantalla" id="tercera-pantalla">
       <div class="Tarjeta2">
         <h2 class="subtitulo">¿Cuál es la Capital de Tayikistán?</h2>
-        <form class="pregunta2">
-          <div class="respuestas2" id="seleccionarRespuesta2">
-            <label class="primeraopcion" for="buenos-Aires">Buenos Aires
+        <form class="pregunta2" id="form2">
+            <label class="primeraopcion" for="buenos-aires"
+              >Buenos Aires
             </label>
-            <input class="input" type="radio" name="respuesta" id="buenos-Aires" value="buenos-Aires">
+            <input
+              class="input"
+              type="radio"
+              name="respuesta"
+              id="buenos-aires"
+              value="Buenos Aires"
+            />
 
-            <label class="primeraopcion" for="bogota">Bogotá
-            </label>
-            <input class="input" type="radio" name="respuesta" id="bogota" value="bogota">
+            <label class="primeraopcion" for="bogota">Bogotá </label>
+            <input
+              class="input"
+              type="radio"
+              name="respuesta"
+              id="bogota"
+              value="Bogotá"
+            />
 
-            <label class="primeraopcion" for="dusambe">Dusambé
-            </label>
-            <input class="input" type="radio" name="respuesta" id="dusambe" value="dusambe">
+            <label class="primeraopcion" for="dusambe">Dusambé </label>
+            <input
+              class="input"
+              type="radio"
+              name="respuesta"
+              id="dusambe"
+              value="Dusambe"
+            />
+          <div class="etiquetas">
+            <button class="enviar" type="button" id="boton-enviar1">enviar</button>
           </div>
         </form>
       </div>
       <p class="frase">This is the second question.</p>
-      <img src="../img/Anunciador_Dokkan.webp" alt="presentador">
-      <div class="etiquetas"> 
-      <button class="enviar" type="button" id="boton-enviar1">enviar</button>     
-    </div>
+      <img src="../img/Anunciador_Dokkan.webp" alt="presentador" />
     </section>
 
-    <section class="cuartaPantalla" id="cuartaPantalla">
+    <section class="cuarta-pantalla" id="cuarta-pantalla">
       <div class="Tarjeta3">
         <h2 class="subtitulo">¿Cuál es la Capital de Italia?</h2>
         <div class="pregunta3">
           <form class="respuestas3" id="seleccionarRespuesta3">
-            <label class="primeraopcion" for="venezia">Venezia
-            </label>
-            <input class="input" type="radio" name="respuesta" id="venezia" value="venezia">
-            <label class="primeraopcion" for="caracas">Caracas
-            </label>
-            <input class="input" type="radio" name="respuesta" id="caracas" value="caracas">
+            <label class="primeraopcion" for="venezia">Venezia </label>
+            <input
+              class="input"
+              type="radio"
+              name="respuesta"
+              id="venezia"
+              value="Venezia"
+            />
+            <label class="primeraopcion" for="caracas">Caracas </label>
+            <input
+              class="input"
+              type="radio"
+              name="respuesta"
+              id="caracas"
+              value="Caracas"
+            />
 
-            <label class="primeraopcion" for="roma">Roma
-            </label>
-            <input class="input" type="radio" name="respuesta" id="roma" value="roma">
+            <label class="primeraopcion" for="roma">Roma </label>
+            <input
+              class="input"
+              type="radio"
+              name="respuesta"
+              id="roma"
+              value="Roma"
+            />
           </form>
         </div>
       </div>
       <p class="frase">This is the third question.</p>
-      <img src="../img/Anunciador_Dokkan.webp" alt="presentador">
-      <div class="etiquetas"> 
-      <button class="enviar" type="button" id="boton-enviar2">enviar</button>     
-    </div>
+      <img src="../img/Anunciador_Dokkan.webp" alt="presentador" />
+      <div class="etiquetas">
+        <button class="enviar" type="button" id="boton-enviar2">enviar</button>
+      </div>
     </section>
 
-
-    <section id="quintaPantalla">
+    <section id="quinta-pantalla">
       <h2>Answers</h2>
 
-      <p>Pregunta 1: correcta <br>
-        respuesta real</p>
-      <p>Pregunta 1: correcta <br>
-        respuesta real</p>
-      <p>Pregunta 1: correcta br
-        respuesta real</p>
+      <p>
+        The answer one is <span id="election1"></span>:
+        <span id="correcta1"></span> <br />
+        Timbú
+      </p>
+      <p>
+        The answer two is <span id="election2"></span>:
+        <span id="correcta2"></span> <br />
+        Dusambé
+      </p>
+      <p>
+        The answer three is <span id="election3"></span>:
+        <span id="correcta3"></span> <br />
+        Roma
+      </p>
 
       <button class="restart" type="button" id="boton-restart">RESTART</button>
     </section>
-    
+
     <div id="root"></div>
+    <script src="./main.js"></script>
   </body>
 </html>

@@ -1,13 +1,12 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
-
 body {
-  background-color: #000000;
-  background-repeat: no-repeat;
-	background-size: 100% 165%;
-  font-family: 'Bungee Spice' , cursive;
-  color: rgb(253, 253, 253);
+cursor: pointer;
   
 }
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+
 .titulo {
   display: flex;
   justify-content: center;

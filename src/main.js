@@ -1,102 +1,144 @@
-function iniciarTrivia(){
-  
-  let selectionStart = document.getElementById('segundaPantalla');
-  selectionStart.style.display = 'none'
-  let selectionEnviar = document.getElementById('terceraPantalla');
-  selectionEnviar.style.display = 'none'
-  let selectionEnviar1 = document.getElementById('cuartaPantalla');
-  selectionEnviar1.style.display = 'none'
-  let selectionEnviar2 = document.getElementById('quintaPantalla');
-  selectionEnviar2.style.display = 'none'
+let primeraPantalla = document.getElementById("primera-pantalla");
+primeraPantalla.style.display = "block";
+let segundaPatalla = document.getElementById("segunda-pantalla");
+segundaPatalla.style.display = "none";
+let terceraPantalla = document.getElementById("tercera-pantalla");
+terceraPantalla.style.display = "none";
+let cuartaPantalla = document.getElementById("cuarta-pantalla");
+cuartaPantalla.style.display = "none";
+let quintaPantalla = document.getElementById("quinta-pantalla");
+quintaPantalla.style.display = "none";
+let acc = 0;
 
-  let botonStart = document.getElementById('boton-start');
-  botonStart.addEventListener('click', segundaPantalla);
-  let botonEnviar = document.getElementById('boton-enviar');
-  botonEnviar.addEventListener('click', terceraPantalla);
-  let botonEnviar1 = document.getElementById('boton-enviar1');
-  botonEnviar1.addEventListener('click', cuartaPantalla);
-  let botonEnviar2 = document.getElementById('boton-enviar2');
-  botonEnviar2.addEventListener('click', quintaPantalla);
+let inputName = document.getElementById("name");
+let botonStart = document.getElementById("boton-start");
+let spanUserName = document.getElementById("user-name");
 
-  
-}
- 
-
-
-function segundaPantalla () {
-
-  let selectionInicio = document.getElementById('primeraPantalla');
-  selectionInicio.style.display = 'none'
-  let selectionEnviar = document.getElementById('segundaPantalla');
-  selectionEnviar.style.display = 'flex'
-
-  let inputStart = document.getElementById('boton-start')
-
-  if(inputStart.checked){
-    spanStart.innertHTML('segundaPantalla')
+botonStart.addEventListener("click", () => {
+  if (inputName.value.trim()) {
+    primeraPantalla.style.display = "none";
+    segundaPatalla.style.display = "block";
+    spanUserName.innerText = inputName.value;
+  } else {
+    alert("Please write your name");
   }
-  let inputName = document.getElementById('name').value
-  let spanUserName = document.getElementById('user-name');
-  spanUserName.innerText = inputName;
-}
+});
 
-function terceraPantalla () {
+let inputSofia = document.getElementById("sofia");
+let inputTimbu = document.getElementById("timbu");
+let inputSkopje = document.getElementById("skopje");
+let spanElection1 = document.getElementById("election1");
+let spanCorrecta1 = document.getElementById("correcta1");
 
-  let selectionEnviar = document.getElementById('segundaPantalla');
-  selectionEnviar.style.display = 'none'
-  let selectionEnviar1 = document.getElementById('terceraPantalla');
-  selectionEnviar1.style.display = 'flex'
-
-  let inputEnviar = document.getElementById('boton-enviar')
-
-  if(inputEnviar.checked){
-    spanEnviar.innertHTML('terceraPantalla')
+let form1 = document.getElementById("form1");
+form1.addEventListener("submit", (event1) => {
+  if (document.querySelector('input[name="respuesta1"]:checked')) {
+    if (
+      document.querySelector('input[name="respuesta1"]:checked').value === "Timbu") {
+      acc += 1;
+    } else {
+      acc += 0;
+    }
+    segundaPatalla.style.display = "none";
+    terceraPantalla.style.display = "block";
+  } else {
+    alert("Selecciona alguna respuesta");
   }
-}
+  console.log(acc);
+  event1.preventDefault();
+});
 
-function cuartaPantalla () {
 
-  let selectionEnviar1 = document.getElementById('terceraPantalla');
-  selectionEnviar1.style.display = 'none'
-  let selectionEnviar2 = document.getElementById('cuartaPantalla');
-  selectionEnviar2.style.display = 'flex'
 
-  let inputEnviar1 = document.getElementById('boton-enviar1')
+let inputBuenosAires = document.getElementById("buenos-aires");
+let inputBogota = document.getElementById("bogota");
+let inputDusambe = document.getElementById("dusambe");
+let spanElection2 = document.getElementById("election2");
+let spanCorrecta2 = document.getElementById("correcta2");
 
-  if(inputEnviar1.checked){
-    spanEnviar1.innertHTML('cuartaPantalla')
+let form2 = document.getElementById('form2');
+form2.addEventListener("submit", (event2) => {
+  if (document.querySelector('input[name="respuesta2"]:checked')) {
+    if (document.querySelector('input[name="respuesta2"]:checked').value === "Dusambe") {
+      acc += 1;
+    }else{
+      acc += 0;
+    }
+    terceraPantalla.style.display = "none";
+    cuartaPantalla.style.display = "block";
+  }else{
+    alert("Selecciona alguna respuesta");
   }
-}
+  console.log(acc);
+  event2.preventDefault();
+});
 
-function quintaPantalla () {
+// let botonEnviar1 = document.getElementById("boton-enviar1");
+// botonEnviar1.addEventListener("click", () => {
+//   if (inputBuenosAires.checked) {
+//     terceraPantalla.style.display = "none";
+//     cuartaPantalla.style.display = "block";
+//     spanElection2.innerHTML = inputBuenosAires.value;
+//     spanCorrecta2.innerText = "Incorrect";
+//   } else if (inputBogota.checked) {
+//     terceraPantalla.style.display = "none";
+//     cuartaPantalla.style.display = "block";
+//     spanElection2.innerHTML = inputBogota.value;
+//     spanCorrecta2.innerText = "Incorrect";
+//   } else if (inputDusambe.checked) {
+//     terceraPantalla.style.display = "none";
+//     cuartaPantalla.style.display = "block";
+//     spanElection2.innerHTML = inputDusambe.value;
+//     spanCorrecta2.innerText = "Correct";
+//     acc += 1;
+//   } else {
+//     alert("please choose an option");
+//   }
+// });
 
-  let selectionEnviar2 = document.getElementById('cuartaPantalla');
-  selectionEnviar2.style.display = 'none'
-  let selectionRestart = document.getElementById('quintaPantalla');
-  selectionRestart.style.display = 'flex'
+let inputVenezia = document.getElementById("venezia");
+let inputCaracas = document.getElementById("caracas");
+let inputRoma = document.getElementById("roma");
+let spanElection3 = document.getElementById("election3");
+let spanCorrecta3 = document.getElementById("correcta3");
 
-  let inputEnviar2 = document.getElementById('boton-enviar2')
-
-  if(inputEnviar2.checked){
-    spanEnviar2.innertHTML('quintaPantalla')
+let botonEnviar2 = document.getElementById("boton-enviar2");
+botonEnviar2.addEventListener("click", () => {
+  if (inputVenezia.checked) {
+    cuartaPantalla.style.display = "none";
+    quintaPantalla.style.display = "block";
+    spanElection3.innerHTML = inputVenezia.value;
+    spanCorrecta3.innerText = "Incorrect";
+  } else if (inputCaracas.checked) {
+    cuartaPantalla.style.display = "none";
+    quintaPantalla.style.display = "block";
+    spanElection3.innerHTML = inputCaracas.value;
+    spanCorrecta3.innerText = "Incorrect";
+  } else if (inputRoma.checked) {
+    cuartaPantalla.style.display = "none";
+    quintaPantalla.style.display = "block";
+    spanElection3.innerHTML = inputRoma.value;
+    spanCorrecta3.innerText = "Correct";
+    acc += 1;
+  } else {
+    alert("please choose an option");
   }
-   let inputRestart = document.getElementById('boton-restart')
-   inputRestart.addEventListener('click', reiniciarJuego)
-}
+});
 
-function reiniciarJuego() {
-  location.reload()
-}
+let inputRestart = document.getElementById("boton-restart");
 
+inputRestart.addEventListener("click", () => {
+  // if (spanElection1 == 'Timbu') {
+  //   spanCorrecta1 = 'Correct'
+  // } else if(spanElection2 == 'Bogota'){
+  //   spanCorrecta2 = 'Correct'
+  // } else if(spanElection3 == 'Roma'){
+  //   spanCorrecta3 = 'Correct'
+  // }
 
+  // else{
+  //   spanCorrecta1 = 'Incorrect'
+  // }
 
-window.addEventListener('load', iniciarTrivia)
-
-
-
-
-
-
-
-
-
+  location.reload();
+});
