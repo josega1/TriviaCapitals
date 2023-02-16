@@ -17,7 +17,7 @@ let spanUserName = document.getElementById("user-name");
 botonStart.addEventListener("click", () => {
   if (inputName.value.trim()) {
     primeraPantalla.style.display = "none";
-    segundaPatalla.style.display = "block";
+    segundaPatalla.style.display = "flex";
     spanUserName.innerText = inputName.value;
   } else {
     alert("Please write your name");
@@ -42,7 +42,7 @@ form1.addEventListener("submit", (event1) => {
       acc += 0;
     }
     segundaPatalla.style.display = "none";
-    terceraPantalla.style.display = "block";
+    terceraPantalla.style.display = "flex";
   } else {
     alert("Selecciona alguna respuesta");
   }
@@ -68,7 +68,7 @@ form2.addEventListener("submit", (event2) => {
       acc += 0;
     }
     terceraPantalla.style.display = "none";
-    cuartaPantalla.style.display = "block";
+    cuartaPantalla.style.display = "flex";
     
   }else{
     alert("Selecciona alguna respuesta");
@@ -93,7 +93,7 @@ form3.addEventListener("submit", (event3) => {
       acc += 0;
     }
     cuartaPantalla.style.display = "none";
-    quintaPantalla.style.display = "block";
+    quintaPantalla.style.display = "flex";
   }else{
     alert("Selecciona alguna respuesta");
   }
